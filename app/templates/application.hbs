@@ -1,5 +1,9 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
 {{outlet}}
+
+<WalletSavedViewTable>
+  <:table-actions as |cell|>
+    {{log cell.value}}
+    {{log cell.row}}
+    {{log cell.column}}
+  </:table-actions>
+</WalletSavedViewTable>

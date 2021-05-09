@@ -1,0 +1,13 @@
+<EmberTable as |t|>
+  <t.head @columns={{this.columns}} />
+
+  <t.body @rows={{this.rows}} as |b|>
+    <b.row as |r|>
+      <r.cell as |value column row|>
+        <!-- TODO: We should use component helper to invoke indiviual cell formatting components (internal API of wallet) -->
+        {{yield (hash value=value row=row column=column) to="table-actions"}}
+      </r.cell>
+    </b.row>
+  </t.body>
+
+</EmberTable>
